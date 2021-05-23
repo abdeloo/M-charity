@@ -17,7 +17,6 @@
 
             <div class="form-group">
             <label for="description">Description de projet :</label>
-            <textarea class="form-control" id="description" name="description" rows="3" >{{ $project->description }}</textarea>
             </div>
             
             <div class="form-group">

@@ -20,14 +20,14 @@
                       </thead>
                       <tbody>
                       @foreach ($projects as $project)        
+
                           <tr>      
-                        
+
                                 <td>{{ $project->title }}</td>
                                 <td>{{ $project->description }}</td>
                                 <td>{{ $project->action_date }}</td> 
                                 <td>{{ $project->project_state }}</td>
 
-                                
                                 <td>
                                                                    
                                 <form action ="{{ url('projects/'. $project->id) }}" method="POST">
@@ -35,13 +35,11 @@
                                     @method('DELETE')
                                     <button type="button" class="btn btn-success"><a href="{{ url('projects/' . $project->id .'/edit' ) }}">Editer</a></button>
                                     <button type="submit" class="btn btn-danger">Supprimer</button>                                   
-                                </form>
-                                
+                                </form>                     
                                 </td>
                         </tr>    
                       @endforeach       
-                </tbody>
-                      
+                </tbody>        
 
                 </table>
                 </div>

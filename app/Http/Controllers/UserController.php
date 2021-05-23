@@ -30,7 +30,7 @@ class UserController extends Controller
 
         $adherent = User::find($id);
         
-        return view("auth.admin.edit2" , ['adherent' => $adherent] ); 
+        return view("auth.admin.edit2" , ['adherent' => $adherent]); 
     }
 
     function update2(Request $request , $id){
@@ -41,8 +41,7 @@ class UserController extends Controller
 
         $adherent->save();
 
-        return redirect('adherents/admin');
-
+        return redirect('admin/adherents');
 
     }
 }

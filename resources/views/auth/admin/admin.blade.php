@@ -3,9 +3,9 @@
 @section('content')
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="{{ url('projects/admin') }}">Les projets</a>
-  <a href="{{ url('adherents/admin') }} ">Les Adhérents</a>
-  <a href="{{ url('contacts') }}">Les contacts</a>
+  <a href="{{ url('admin/projects') }}">Les projets</a>
+  <a href="{{ url('admin/adherents') }} ">Les adhérents</a>
+  <a href="{{ url('contacts') }}">Les Contacts</a>
   <a href ="{{ url('logout') }}">Déconnecter</a>
 </div>
 
@@ -30,5 +30,5 @@ function closeNav() {
   document.getElementById("adminLayout").style.left = "0";
 }
 </script>
-@endsection
+@endSection
 

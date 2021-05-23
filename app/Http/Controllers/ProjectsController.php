@@ -11,11 +11,12 @@ class ProjectsController extends Controller
     // Afficher les projets non rélisées    
     function show1()
     {
-         $data =  Project::where('project_state' , 'non-réalisé')->get();   
-         return view('projects1' , ['projects'=> $data]);    
+         $data =  Project::where('project_state' , 'non-réalisé')->get();  
+         return view('projects1' , ['projects' => $data]);
     }
 
     // Afficher les projets réalisées
+    
     function show2()
     {
         $data = Project::where('project_state' , 'réalisé')->orderBy('action_date' , 'DESC')->take(12)->get();
@@ -26,7 +27,7 @@ class ProjectsController extends Controller
 
     function showAll()
     {
-        $data = Project::all();
+        $data = Project::all();      
         return view("auth.admin.projects" , ['projects' => $data]); 
     }
 
@@ -51,12 +52,13 @@ class ProjectsController extends Controller
 
         $project->save();
 
-        return redirect('projects/admin');
+        return redirect('admin/projects');
 
     }
+    
     // Récupéerer  un Projet puis le mettre dans formulaire 
     function edit($id){
-
+        
             $project = Project::find($id);
             
             return view("auth.admin.edit" , ['project' => $project] ); 
@@ -64,7 +66,7 @@ class ProjectsController extends Controller
 
     //Modifier un Projet 
     function update(Request $request, $id){
-          
+
          $project = Project::find($id);
          $project->title = $request->input("title");
          $project->description = $request->input("description");
@@ -74,7 +76,7 @@ class ProjectsController extends Controller
          $project->save();
 
          //
-         return redirect('projects/admin');
+         return redirect('admin/projects');
     } 
 
     // Supprimer un projet
@@ -84,11 +86,6 @@ class ProjectsController extends Controller
 
         $project->delete();
 
-        return redirect('projects/admin');
-    
+        return redirect('admin/projects');
     }
-
-
-
-
 }

@@ -5,22 +5,24 @@
         <div class="row d-flex justify-content-center">
          <div class="d-flex justify-content-end">       
             <div class="col-md-12">
-                 <button class="btn btn-light" style="float:right" ><a href="{{ url('adherents/create') }}">Ajouter un adherent</a></button>
-              
+
+                 <!-- <button class="btn btn-light" style="float:right" ><a href="{{ url('adherents/create') }}">Ajouter un adherent</a></button> -->
+
                 <table class="table table-striped">
                       <thead>
                           <tr>
-                                 <th>Nom adhérent </th> 
+                                 <th>Nom َadhérent</th> 
                                  <th>Email adhérent</th>
                                  <th>Ville adhérent</th>
                                  <th>Téléphone adhérent</th>
-                                 <th>etat d'adhésion</th>
-                                 <th>hello</th>
+                                 <th>Statut d'adhésion</th>
+                                 <th>Options</th>
                           </tr>        
                       </thead>
                       <tbody>
 
-                      @foreach ($adherents as $adherent)        
+                      @foreach ($adherents as $adherent)  
+                            
                           <tr>      
                         
                                 <td>{{ $adherent->name }}</td>
@@ -29,9 +31,8 @@
                                 <td>{{ $adherent->phone }}</td>
                                 <td>{{ $adherent->adhesion_state }}</td> 
 
-                                
                                 <td>
-                                                                   
+                                                     
                                 <form action ="{{ url('adherents/'. $adherent->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
@@ -43,8 +44,6 @@
                         </tr>    
                       @endforeach       
                 </tbody>
-                      
-
                 </table>
                 </div>
 @endsection
