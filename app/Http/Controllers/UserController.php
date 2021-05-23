@@ -27,7 +27,7 @@ class UserController extends Controller
     }
 
     function edit($id){
-
+        
         $adherent = User::find($id);
         
         return view("auth.admin.edit2" , ['adherent' => $adherent]); 

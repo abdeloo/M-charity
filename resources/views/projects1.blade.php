@@ -103,7 +103,6 @@
                         <ul class="submenu">
                             <li class="submenu-item"><a href="projects1">Les projets à venir</a></li>
                             <li class="submenu-item"><a href="projects2">Les projets réalisés</a></li>
-                            
                         </ul>
 
                         </li>
