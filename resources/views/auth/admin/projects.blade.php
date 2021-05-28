@@ -22,7 +22,6 @@
                       @foreach ($projects as $project)        
 
                           <tr>      
-
                                 <td>{{ $project->title }}</td>
                                 <td>{{ $project->description }}</td>
                                 <td>{{ $project->action_date }}</td> 

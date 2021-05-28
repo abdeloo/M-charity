@@ -6,8 +6,8 @@
   <a href="{{ url('admin/projects') }}">Les projets</a>
   <a href="{{ url('admin/adherents') }} ">Les adhérents</a>
   <a href="{{ url('contacts') }}">Les contacts</a>
-  <a href ="{{ url('logout') }}">Déconnecter</a>
-  
+  <a href ="{{ url('logout') }}">Se déconnecter</a>
+
 </div>
 
 
@@ -18,7 +18,9 @@
         </div>
 
 <script>
+
 function openNav() {
+
   document.getElementById("mySidenav").style.width = "250px";
   document.getElementById("open").style.left = "255px";
   document.getElementById("adminLayout").style.left = "255px";
@@ -26,6 +28,7 @@ function openNav() {
 }
 
 function closeNav() {
+
   document.getElementById("mySidenav").style.width = "0";
   document.getElementById("open").style.left = "0";
   document.getElementById("adminLayout").style.left = "0"

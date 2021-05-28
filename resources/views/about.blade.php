@@ -193,7 +193,7 @@
                                  <br>
                    
                                  <p style="font-size:16px">
-
+                                 
                                   Notre association a des objectifs globales  qui touche : 
                                   
                                   L’amélioration les conditions de vie des necessiteux, et ceci se faisant par un soutien et accompagnement perpetuel dans plusieurs domaines:
@@ -611,7 +611,7 @@
 
                 <form class="form-donation">
 
-                        <h3 class="title-style-1 text-center">Merci pour votre don <span class="title-under"></span>  </h3>
+                        <h3 class="title-style-1 text-center">Merci pour votre don<span class="title-under"></span>  </h3>
 
                         <div class="row">
 
@@ -759,24 +759,5 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X');ga('send','pageview');
         </script>
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
 </html>

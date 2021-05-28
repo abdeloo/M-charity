@@ -6,8 +6,8 @@
         <div class="row d-flex justify-content-center">
             <div class="col-md-6"> 
                        
-       <form action="{{ url('projects/'. $project->id) }}" method="POST">
-    
+       <form action="{{ url('projects/'. $project->id) }}" method="POST"  enctype = "multipart/form-data">
+       
        @csrf
        {{ method_field('PUT') }}
             <div class="form-group">
@@ -17,6 +17,7 @@
 
             <div class="form-group">
             <label for="description">Description de projet :</label>
+            <textarea class="form-control" id="description" name="description" rows="3"></textarea>
             </div>
             
             <div class="form-group">
@@ -42,7 +43,7 @@
                 <input type="file" class="form-control-file" id="project_file" name="project_image" accept="image/png, image/jpeg" class="form-group">
             </div>
 
-            <button type="submit" class="btn btn-primary" value ="Enregistrer">Submit</button>
+            <button type="submit" class="btn btn-primary" value ="Enregistrer">Editer</button>
         </form>
             </div>
         </div>

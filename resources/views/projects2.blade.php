@@ -34,7 +34,6 @@
 
     <header class="main-header">
         
-    
         <nav class="navbar navbar-static-top">
 
             <div class="navbar-top">
@@ -142,7 +141,6 @@
                                 </li>
                                 </ul>
                     </li>
-                    
 
                     @endguest
                     </li>            
@@ -167,7 +165,7 @@
 			
 			<h1 class="page-title">Les projects réalisés<span class="title-under"></span></h1>
 			<p class="page-description">
-                 <p><a href="index">Accueil</a> / les projets réalisés </p> 
+                 <p><a href="index">Accueil</a> les projets réalisées </p> 
 			</p>
 			
 		</div>
@@ -189,9 +187,7 @@
 
 		                    <div class="cause">
 
-		                        <img src="{{ $project['image'] }}" alt="" class="cause-img">
-                            
-
+		                        <img src="{{ asset( 'storage/images/projets/' . $project['image']) }}" alt="" class="cause-img" height = "190px">
 		                        <h4 class="cause-title">{{ $project['title'] }}</h4>
 		                        <div class="cause-details">
                                          {{ $project['description'] }}
@@ -442,11 +438,6 @@
                             </div>
 
                         </div>
-
-
-
-                       
-                    
                 </form>
             
           </div>

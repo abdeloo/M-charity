@@ -49,6 +49,23 @@ class ProjectsController extends Controller
         $project->project_state = $request->input("project_state");
         $project->location = $request->input("location");
         $project->action_date = $request->input("action_date");
+        $destination_path = '/public/images/projects/';         
+        if($request->hasFile('project_image'))
+        { 
+
+        $image = $request->file("project_image");
+        
+        $image_name = $image->getClientOriginalName();
+        
+        $image = $request->file("project_image");
+    
+        $project->image = $destination_path . $image_name;    
+        
+        $path = $request->file("project_image")->storeAs($destination_path);  
+        
+        $input['project_image'] = $image_name;
+        
+        }
 
         $project->save();
 
@@ -68,14 +85,34 @@ class ProjectsController extends Controller
     function update(Request $request, $id){
 
          $project = Project::find($id);
+         
          $project->title = $request->input("title");
+         
          $project->description = $request->input("description");
+         
          $project->project_state = $request->input("project_state");
+         
          $project->location = $request->input("location");
+         
          $project->action_date = $request->input("action_date");  
+         
+         $destination_path = 'public/images/projets';         
+         
+         if($request->hasFile('project_image'))
+         {  
+         $image = $request->file("project_image");
+         
+         $image_name = $image->getClientOriginalName();
+         
+         $project->image = $image_name;
+         
+         $path = $request->file("project_image")->storeAs($destination_path , $image_name);  
+
+         $input['project_image'] = $image_name;
+        } 
          $project->save();
 
-         //
+            
          return redirect('admin/projects');
     } 
 

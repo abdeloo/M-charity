@@ -41,10 +41,10 @@
           <input type="date" class="form-control" id="action_date" name="action_date">
         </div>
         
-        <!-- <div class="form-group">
+         <div class="form-group">
             <label for="project_image">Image de projet</label>
             <input type="file" class="form-control-file" id="project_file" name="project_image" accept="image/png, image/jpeg" class="form-group">
-        </div> -->
+        </div> 
 
         <button type="submit" class="btn btn-primary" value ="Enregistrer">Submit</button>
         </form>

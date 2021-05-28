@@ -98,8 +98,8 @@
                         <li><a href="index">ACCUEIL</a></li>
                         <li><a href="about">A PROPOS</a></li>
 
-                        <li class="has-child"><a class ="is-active" href="#">PROJETS</a>
-
+                        <li class="has-child"><a class ="is-active" href="#">PROJECTS</a>
+                        
                         <ul class="submenu">
                             <li class="submenu-item"><a href="projects1">Les projets à venir</a></li>
                             <li class="submenu-item"><a href="projects2">Les projets réalisés</a></li>
@@ -142,9 +142,8 @@
                               
                                 </li>
                                 </ul>
-                    </li>
+                    </li> 
                     
-
                     @endguest
                     </li>            
 
@@ -191,8 +190,7 @@
 
 		                    <div class="cause">
 
-		                        <img src="{{ $project['image'] }}" alt="" class="cause-img">
-	                        
+		                        <img src="{{ asset('/storage/images/projets/' . $project['image']) }}" alt="" class="cause-img" height = "190px">
 
 		                        <h4 class="cause-title">{{ $project['title'] }}</h4>
 		                        <div class="cause-details">
@@ -223,11 +221,7 @@
 	        
 	    </div> <!-- /.our-causes -->
 
-		
-
-
 	</div> <!-- /.main-container  -->
-
 
     <footer class="main-footer">
 
@@ -254,7 +248,7 @@
                                 </p> 
                                  
                                  <p>                                
-                                  en effet en observant les difficultés que rencontraient certains habitants on ne pouvait qu’agir pour leurs bien. 
+                                  en effet en observant les difficultés que rencontraient certains habitants on ne pouvait qu’agir pour leurs bien.
                                  </p>
 
                             </div>
